@@ -1,0 +1,245 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "b0000001-0000-0000-0000-000000000001")
+	(paper "A3")
+	(title_block
+		(title "jamRF-v2 Chaos-Modulated Jammer")
+		(date "2026-03-19")
+		(rev "2.0")
+		(company "Private / Custom Drone Hardware")
+		(comment 1 "Top-Level Hierarchical Sheet - Baseband/Frontend Architecture")
+		(comment 2 "GPS L1 (1.575 GHz) + Wi-Fi/ISM (2.4 GHz)")
+		(comment 3 "14.8V 4S LiPo Power Source")
+		(comment 4 "Thermal Failsafe + GaN Bias Sequencing")
+	)
+	(lib_symbols)
+	(text "jamRF-v2: High-Power Chaos-Modulated Jammer\nBaseband / Frontend Architecture (HackRF One style)\n\nGPS L1 (1.575 GHz) + Wi-Fi/ISM (2.4 GHz)\n\nSystem Architecture:\n- Baseband: ESP32 controller, chaos modulation DAC outputs\n- Frontend GPS: VCO -> Atten -> BPF -> GaN PA -> Isolator -> SMA\n- Frontend WiFi: VCO -> Atten -> BPF -> WiFi PA -> Isolator -> SMA\n- Power: Battery, buck, LDO, charge pump, MOSFET switches\n- Control: Thermal failsafe, bias sequencing, RF shielding\n\n4-Layer FR4, 0.062\", 1oz Cu, 50-ohm controlled impedance"
+		(exclude_from_sim no)
+		(at 38.1 33.02 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+			)
+			(justify left)
+		)
+		(uuid "b0000001-0000-0000-0000-0000000000f0")
+	)
+	(sheet
+		(at 38.1 55.88)
+		(size 55.88 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b0000001-0000-0000-0000-000000000010")
+		(property "Sheetname" "Baseband"
+			(at 38.1 54.8514 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "baseband.kicad_sch"
+			(at 38.1 69.2662 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jamrf-v2"
+				(path "/b0000001-0000-0000-0000-000000000001"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.1 78.74)
+		(size 55.88 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b0000001-0000-0000-0000-000000000020")
+		(property "Sheetname" "Frontend - GPS L1"
+			(at 38.1 77.7114 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "frontend_gps.kicad_sch"
+			(at 38.1 92.1262 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jamrf-v2"
+				(path "/b0000001-0000-0000-0000-000000000001"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.1 101.6)
+		(size 55.88 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b0000001-0000-0000-0000-000000000030")
+		(property "Sheetname" "Frontend - WiFi 2.4 GHz"
+			(at 38.1 100.5714 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "frontend_wifi.kicad_sch"
+			(at 38.1 114.9862 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jamrf-v2"
+				(path "/b0000001-0000-0000-0000-000000000001"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.1 124.46)
+		(size 55.88 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b0000001-0000-0000-0000-000000000040")
+		(property "Sheetname" "Power Distribution"
+			(at 38.1 123.4314 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 38.1 137.8462 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jamrf-v2"
+				(path "/b0000001-0000-0000-0000-000000000001"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.1 147.32)
+		(size 55.88 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b0000001-0000-0000-0000-000000000050")
+		(property "Sheetname" "Control and Safety"
+			(at 38.1 146.2914 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "control.kicad_sch"
+			(at 38.1 160.7062 0)
+			(effects
+				(font
+					(size 1.524 1.524)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jamrf-v2"
+				(path "/b0000001-0000-0000-0000-000000000001"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
