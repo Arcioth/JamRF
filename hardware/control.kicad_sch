@@ -12,6 +12,145 @@
 		(comment 1 "Thermal Monitor + Bias Sequencing Comparator")
 	)
 	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -31,7 +170,7 @@
 				)
 			)
 			(property "Value" "R"
-				(at -2.032 0 90)
+				(at 0 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -39,7 +178,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at -1.778 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -56,7 +195,25 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -355,7 +512,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -438,126 +595,10 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C"
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "C"
-				(at 2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "C"
-				(at -2.032 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(text "THERMAL MONITORING\n+3V3 -> R_TH (10k fixed) -> midpoint -> TH1 (10k NTC) -> GND\nMidpoint to THERM_ADC -> G36 (ADC1_CH0, always available)\nR_ntc = R_TH * adc / (ADC_MAX - adc)\nAt 25C: ~1.65V  At 85C: ~2.7V (voltage rises with temp)"
 		(exclude_from_sim no)
-		(at 43.18 40.64 0)
+		(at 39.624 33.02 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -568,7 +609,7 @@
 	)
 	(text "BIAS SEQUENCING (sense on IN_A-, ref on IN_A+)\nSense divider: +3V3 -> 100k -> 270k -> -5V\n  -5V present: midpoint ~1.06V (below ref)\n  -5V absent:  midpoint ~2.41V (above ref)\nReference: 3.3V * 82k/182k = 1.49V\nOUT_A high (via R_PU) when -5V OK -> BIAS_OK HIGH -> Q1 ON\nOUT_A low when -5V absent -> BIAS_OK LOW -> Q1 OFF (safe)"
 		(exclude_from_sim no)
-		(at 106.68 40.64 0)
+		(at 128.27 31.75 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -576,66 +617,6 @@
 			(justify left)
 		)
 		(uuid "b6000000-4002-0000-0000-000000000001")
-	)
-	(wire
-		(pts
-			(xy 149.86 78.74) (xy 144.78 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6000000-1050-0000-0000-000000000001")
-	)
-	(wire
-		(pts
-			(xy 149.86 81.28) (xy 144.78 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6000000-1051-0000-0000-000000000001")
-	)
-	(global_label "GND"
-		(shape input)
-		(at 144.78 78.74 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b6000000-2020-0000-0000-000000000001")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+5V"
-		(shape input)
-		(at 144.78 81.28 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b6000000-2021-0000-0000-000000000001")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 144.78 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 	)
 	(no_connect
 		(at 170.18 78.74)
@@ -723,13 +704,23 @@
 	)
 	(wire
 		(pts
-			(xy 119.38 62.23) (xy 142.24 62.23)
+			(xy 119.38 62.23) (xy 139.7 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "b6000000-1013-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 134.62 62.23) (xy 142.24 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6000000-1013-0000-0000-000000000002")
 	)
 	(wire
 		(pts
@@ -890,6 +881,46 @@
 			(type default)
 		)
 		(uuid "b6000000-1041-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 149.86 78.74) (xy 144.78 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6000000-1050-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 149.86 81.28) (xy 144.78 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6000000-1051-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 195.58 71.12) (xy 195.58 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6000000-1060-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 195.58 80.01) (xy 195.58 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6000000-1061-0000-0000-000000000001")
 	)
 	(global_label "+3V3"
 		(shape input)
@@ -1111,6 +1142,86 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 144.78 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6000000-2020-0000-0000-000000000001")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+5V"
+		(shape input)
+		(at 144.78 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6000000-2021-0000-0000-000000000001")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 144.78 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "+5V"
+		(shape input)
+		(at 195.58 71.12 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b6000000-2030-0000-0000-000000000001")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 195.58 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6000000-2031-0000-0000-000000000001")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195.58 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 58.42 55.88 0)
@@ -1120,7 +1231,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0001-0000-0000-000000000001")
-		(property "Reference" "R_TH?"
+		(property "Reference" "R?"
 			(at 60.96 55.88 90)
 			(effects
 				(font
@@ -1128,7 +1239,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 55.88 55.88 90)
 			(effects
 				(font
@@ -1154,7 +1265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 58.42 55.88 0)
 			(effects
 				(font
@@ -1171,7 +1282,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_TH?")
+					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -1336,7 +1447,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0004-0000-0000-000000000001")
-		(property "Reference" "R_DIV?"
+		(property "Reference" "R?"
 			(at 121.92 55.88 90)
 			(effects
 				(font
@@ -1344,7 +1455,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "R"
 			(at 116.84 55.88 90)
 			(effects
 				(font
@@ -1370,7 +1481,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 119.38 55.88 0)
 			(effects
 				(font
@@ -1387,7 +1498,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_DIV?")
+					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -1402,7 +1513,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0005-0000-0000-000000000001")
-		(property "Reference" "R_DIV?"
+		(property "Reference" "R?"
 			(at 121.92 68.58 90)
 			(effects
 				(font
@@ -1410,7 +1521,7 @@
 				)
 			)
 		)
-		(property "Value" "270k"
+		(property "Value" "R"
 			(at 116.84 68.58 90)
 			(effects
 				(font
@@ -1436,7 +1547,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 119.38 68.58 0)
 			(effects
 				(font
@@ -1453,7 +1564,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_DIV?")
+					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -1468,7 +1579,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0006-0000-0000-000000000001")
-		(property "Reference" "R_REF?"
+		(property "Reference" "R?"
 			(at 137.16 55.88 90)
 			(effects
 				(font
@@ -1476,7 +1587,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "R"
 			(at 132.08 55.88 90)
 			(effects
 				(font
@@ -1502,7 +1613,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 134.62 55.88 0)
 			(effects
 				(font
@@ -1519,7 +1630,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_REF?")
+					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -1534,7 +1645,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0007-0000-0000-000000000001")
-		(property "Reference" "R_REF?"
+		(property "Reference" "R?"
 			(at 137.16 68.58 90)
 			(effects
 				(font
@@ -1542,7 +1653,7 @@
 				)
 			)
 		)
-		(property "Value" "82k"
+		(property "Value" "R"
 			(at 132.08 68.58 90)
 			(effects
 				(font
@@ -1568,7 +1679,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 134.62 68.58 0)
 			(effects
 				(font
@@ -1585,7 +1696,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_REF?")
+					(reference "R?")
 					(unit 1)
 				)
 			)
@@ -1600,7 +1711,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0008-0000-0000-000000000001")
-		(property "Reference" "R_PU?"
+		(property "Reference" "R?"
 			(at 185.42 68.58 90)
 			(effects
 				(font
@@ -1608,7 +1719,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 180.34 68.58 90)
 			(effects
 				(font
@@ -1634,7 +1745,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 182.88 68.58 0)
 			(effects
 				(font
@@ -1651,69 +1762,9 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "R_PU?")
+					(reference "R?")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 195.58 71.12) (xy 195.58 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6000000-1060-0000-0000-000000000001")
-	)
-	(wire
-		(pts
-			(xy 195.58 80.01) (xy 195.58 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b6000000-1061-0000-0000-000000000001")
-	)
-	(global_label "+5V"
-		(shape input)
-		(at 195.58 71.12 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b6000000-2030-0000-0000-000000000001")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.58 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 195.58 81.28 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b6000000-2031-0000-0000-000000000001")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 195.58 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
 			)
 		)
 	)
@@ -1726,7 +1777,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b6000000-0010-0000-0000-000000000001")
-		(property "Reference" "C_COMP?"
+		(property "Reference" "C?"
 			(at 198.12 76.2 90)
 			(effects
 				(font
@@ -1734,7 +1785,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF 10V"
+		(property "Value" "C"
 			(at 193.04 76.2 90)
 			(effects
 				(font
@@ -1760,7 +1811,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 195.58 76.2 0)
 			(effects
 				(font
@@ -1777,7 +1828,7 @@
 		(instances
 			(project "jamrf-v2"
 				(path "/b0000001-0000-0000-0000-000000000001/b0000001-0000-0000-0000-000000000050"
-					(reference "C_COMP?")
+					(reference "C?")
 					(unit 1)
 				)
 			)

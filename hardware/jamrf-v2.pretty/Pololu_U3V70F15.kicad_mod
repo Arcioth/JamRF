@@ -1,0 +1,230 @@
+(footprint "Pololu_U3V70F15"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Pololu U3V70F15 step-up/step-down voltage regulator module, 17.78x27.94mm, 4 pins")
+	(tags "Pololu regulator buck-boost U3V70F15")
+	(property "Reference" "REF**"
+		(at 0 -15.5 0)
+		(layer "F.SilkS")
+		(uuid "a1000001-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pololu_U3V70F15"
+		(at 0 15.5 0)
+		(layer "F.Fab")
+		(uuid "a1000002-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a1000003-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a1000004-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -9.01 -14.09)
+		(end 9.01 -14.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1000010-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start -9.01 14.09)
+		(end -9.01 -14.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1000011-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 9.01 -14.09)
+		(end 9.01 14.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1000012-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 9.01 14.09)
+		(end -9.01 14.09)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a1000013-0000-0000-0000-000000000001")
+	)
+	(fp_circle
+		(center -3.81 14.6)
+		(end -3.31 14.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "a1000014-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start -9.39 -14.47)
+		(end 9.39 -14.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a1000020-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start -9.39 14.47)
+		(end -9.39 -14.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a1000021-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 9.39 -14.47)
+		(end 9.39 14.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a1000022-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 9.39 14.47)
+		(end -9.39 14.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a1000023-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start -8.89 -13.97)
+		(end 8.89 -13.97)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1000030-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start -8.89 13.97)
+		(end -8.89 -13.97)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1000031-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 8.89 -13.97)
+		(end 8.89 13.97)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1000032-0000-0000-0000-000000000001")
+	)
+	(fp_line
+		(start 8.89 13.97)
+		(end -8.89 13.97)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a1000033-0000-0000-0000-000000000001")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "a1000040-0000-0000-0000-000000000001")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -3.81 12.7)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a1000050-0000-0000-0000-000000000001")
+	)
+	(pad "2" thru_hole circle
+		(at -1.27 12.7)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a1000051-0000-0000-0000-000000000001")
+	)
+	(pad "3" thru_hole circle
+		(at 1.27 12.7)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a1000052-0000-0000-0000-000000000001")
+	)
+	(pad "4" thru_hole circle
+		(at 3.81 12.7)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a1000053-0000-0000-0000-000000000001")
+	)
+	(embedded_fonts no)
+)

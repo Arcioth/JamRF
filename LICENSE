@@ -1,9 +1,7 @@
-Copyright (c) 2026, Arcioth
+Copyright (c) 2024-2026, arcioth
 
-This project is a modified design inspired by HackRF One by Great Scott
-Gadgets (https://github.com/greatscottgadgets/hackrf), which is licensed
-under CERN-OHL-P v2. JamRF v2 is an independent design using different
-components, signal chains, and control systems.
+Modified from HackRF hardware designs:
+Copyright (c) 2012-2022, Great Scott Gadgets <info@greatscottgadgets.com>
 
 CERN Open Hardware Licence Version 2 - Permissive
 

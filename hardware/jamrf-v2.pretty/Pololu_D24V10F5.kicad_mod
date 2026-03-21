@@ -1,0 +1,230 @@
+(footprint "Pololu_D24V10F5"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Pololu D24V10F5 step-down voltage regulator module, 15.24x20.32mm, 4 pins")
+	(tags "Pololu regulator step-down D24V10F5")
+	(property "Reference" "REF**"
+		(at 0 -12.2 0)
+		(layer "F.SilkS")
+		(uuid "b1366093-4f3f-41e2-ac80-20997a7bd3b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Pololu_D24V10F5"
+		(at 0 12.2 0)
+		(layer "F.Fab")
+		(uuid "66406391-8566-47cd-a0b0-91b00e6dc29a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cd00fb69-b54d-4ac3-b862-df66e10cfde8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cf8c6872-f69a-4a76-9e92-d4766ab226fc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -7.74 -10.28)
+		(end 7.74 -10.28)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f9095af8-d0c4-4ac9-8581-6ea6ae66918a")
+	)
+	(fp_line
+		(start -7.74 10.28)
+		(end -7.74 -10.28)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6632f377-5360-4419-9f1e-71718668fdf5")
+	)
+	(fp_line
+		(start 7.74 -10.28)
+		(end 7.74 10.28)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9175ba7b-817f-42f7-b503-f55ba75c8f0a")
+	)
+	(fp_line
+		(start 7.74 10.28)
+		(end -7.74 10.28)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7e05695e-2fb6-46f7-a0a9-67e76d354640")
+	)
+	(fp_circle
+		(center -3.81 10.8)
+		(end -3.31 10.8)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "ed49c77c-93b2-4f28-8d14-cfebb0396c6e")
+	)
+	(fp_line
+		(start -8.12 -10.66)
+		(end 8.12 -10.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "7428def4-898b-48dc-aa81-d80ae8a9a61c")
+	)
+	(fp_line
+		(start -8.12 10.66)
+		(end -8.12 -10.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0322937a-40d0-442f-bece-caf3c812446a")
+	)
+	(fp_line
+		(start 8.12 -10.66)
+		(end 8.12 10.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "43f36e7a-48a9-472c-8a3f-8945bedac8be")
+	)
+	(fp_line
+		(start 8.12 10.66)
+		(end -8.12 10.66)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "bdd42e1f-1f1c-4616-a728-5fb1520fbaa3")
+	)
+	(fp_line
+		(start -7.62 -10.16)
+		(end 7.62 -10.16)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "687f1782-4690-4243-8a98-aa76330729d4")
+	)
+	(fp_line
+		(start -7.62 10.16)
+		(end -7.62 -10.16)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3daef03c-ca5c-4150-8556-e15caba2f4d8")
+	)
+	(fp_line
+		(start 7.62 -10.16)
+		(end 7.62 10.16)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ea9e239d-ab52-45db-98f0-51970bf7ce29")
+	)
+	(fp_line
+		(start 7.62 10.16)
+		(end -7.62 10.16)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "5f4b4b80-9166-48e2-8a82-81658a25a374")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "365e9df8-6e96-47ab-b77f-db4dd38ecfaf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -3.81 9.16)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c2f47e1d-4ac6-472e-b643-6e8e0467b0de")
+	)
+	(pad "2" thru_hole circle
+		(at -1.27 9.16)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "35211d0c-091c-4bd0-bf04-afcd76732e33")
+	)
+	(pad "3" thru_hole circle
+		(at 1.27 9.16)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3571014f-02ee-48fd-a625-bb443d278bb0")
+	)
+	(pad "4" thru_hole circle
+		(at 3.81 9.16)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "4dc0b6a3-1d5a-45fa-82e4-7b054aa3315b")
+	)
+	(embedded_fonts no)
+)
