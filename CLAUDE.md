@@ -10,7 +10,7 @@ jamRF is a custom PCB hardware platform for chaos-modulated RF jamming, designed
 
 Hardware designs derived from the Great Scott Gadgets HackRF project, extended with custom RF jammer designs (jamrf-v1 through v4). Licensed under CERN-OHL-P v2.
 
-**Primary active design:** `hardware/jamrf-v2/` — KiCad 9.0, version 2.0.
+**Primary active design:** `hardware/` — KiCad 9.0, version 2.0. Git remote: `main` branch on GitHub (`Arcioth/JamRF`).
 
 ## Tools & Commands
 
@@ -19,19 +19,19 @@ There is no build system (no Makefile, CMake, etc.). All designs are opened dire
 ### KiCad CLI (validation/export)
 ```bash
 # ERC (Electrical Rules Check)
-kicad-cli sch erc hardware/jamrf-v2/jamrf-v2.kicad_sch
+kicad-cli sch erc hardware/jamrf-v2.kicad_sch
 
 # DRC (Design Rules Check)
-kicad-cli pcb drc hardware/jamrf-v2/jamrf-v2.kicad_pcb
+kicad-cli pcb drc hardware/jamrf-v2.kicad_pcb
 
 # Export netlist
-kicad-cli sch export netlist hardware/jamrf-v2/jamrf-v2.kicad_sch -o output.net
+kicad-cli sch export netlist hardware/jamrf-v2.kicad_sch -o output.net
 
 # Export BOM (XML)
-kicad-cli sch export python-bom hardware/jamrf-v2/jamrf-v2.kicad_sch -o bom.xml
+kicad-cli sch export python-bom hardware/jamrf-v2.kicad_sch -o bom.xml
 
 # Plot Gerbers
-kicad-cli pcb export gerbers hardware/jamrf-v2/jamrf-v2.kicad_pcb -o gerbers/
+kicad-cli pcb export gerbers hardware/jamrf-v2.kicad_pcb -o gerbers/
 ```
 
 ### Python Utility Scripts
@@ -43,7 +43,7 @@ kicad-cli pcb export gerbers hardware/jamrf-v2/jamrf-v2.kicad_pcb -o gerbers/
 
 | Design | KiCad Format | Status |
 |--------|-------------|--------|
-| `hardware/jamrf-v2/` | **KiCad 9.0** (v20250114) | Active, primary target |
+| `hardware/` (v2 files at root) | **KiCad 9.0** (v20250114) | Active, primary target |
 | `hardware/jamrf-v1/` | KiCad 7+ | Complete flat schematic |
 | `jamrf_v3/` | KiCad 6 (v20211123) | Gemini-generated, incomplete |
 | `jamrf_v4/` | KiCad 6 (v20211123) | Gemini-generated, WiFi-only variant |
@@ -65,12 +65,20 @@ When editing `.kicad_sch` files for jamrf-v2, these format requirements must be 
 Hierarchical schematic with 5 sub-sheets, all using **label-based connections** (global labels for inter-sheet, local labels for intra-sheet — no direct wire connections between component pins):
 
 ```
-jamrf-v2.kicad_sch (top-level)
+hardware/
+├── jamrf-v2.kicad_sch (top-level)
 ├── baseband.kicad_sch       — ESP32 (M5StickC Plus2) controller, chaos modulation DAC
 ├── frontend_gps.kicad_sch   — MAX2751 VCO → 3dB pad → BFCN-1575+ BPF → TGA2215-SM GaN PA → Isolator → SMA
 ├── frontend_wifi.kicad_sch  — MAX2750 VCO → 3dB pad → BFCN-2440+ BPF → ZVE-3W-83+ PA → Isolator → SMA
 ├── power.kicad_sch          — 14.8V 4S LiPo → D24V10F5 (5V) + TPS7A4700 (5V analog) + LM2776 (-5V) + U3V70F15 (15V WiFi PA) + MOSFET switches
-└── control.kicad_sch        — LM393 GaN bias sequencing, NTC thermal monitoring
+├── control.kicad_sch        — LM393 GaN bias sequencing, NTC thermal monitoring
+├── jamrf-v2.kicad_sym       — Custom symbol library (18 symbols)
+├── jamrf-v2.pretty/         — Custom footprint library (6 footprints)
+└── jamrf-v2.kicad_pcb       — PCB layout
+
+firmware/
+├── main.py                  — Full operational firmware (chaos modulation, display, mode control)
+└── failsafe.py              — Thermal-only failsafe firmware
 ```
 
 ### PCB Parameters
@@ -113,13 +121,20 @@ jamrf-v2.kicad_sch (top-level)
 - Footprints reference KiCad standard libraries via `KICAD7_FOOTPRINT_DIR` env var
 - Shared legacy library: `hardware/kicad/hackrf.lib` / `hackrf.mod`
 
-## Failsafe Firmware (`failsafe.py`)
+## Firmware
 
-MicroPython running on M5StickC Plus2 (ESP32). Pin mapping:
+### Full Firmware (`firmware/main.py`)
+
+MicroPython operational firmware with chaos modulation engine (logistic map r=3.9999 + Lorenz attractor), ST7789V2 display driver (135x240, SPI), mode selection via buttons (BTN_A G37: cycles OFF/GPS/WIFI/DUAL, BTN_B G39: toggles chaos algorithm), timer-driven ~1kHz DAC output, and all safety monitoring from failsafe.py integrated. Emergency shutdown on unhandled exceptions.
+
+### Failsafe Firmware (`firmware/failsafe.py`)
+
+Minimal thermal-only failsafe. Pin mapping:
 - **G25/DAC**: GPS_TUNE (DAC1 output to MAX2751 VCO)
 - **G26/DAC**: WIFI_TUNE (DAC2 output to MAX2750 VCO)
 - **G36/ADC**: THERM_ADC — NTC thermistor (ADC1_CH0, always available)
 - **G0/ADC**: BATT_ADC — Battery voltage (100k/22k divider)
+- **G35/ADC**: BIAS_OK — LM393 comparator output (confirms -5V bias present)
 - **G33**: BIAS_EN — LM2776 charge pump enable (generates -5V gate bias)
 - **G32**: RELAY_CTRL — Q3/Q2 WiFi PA MOSFET switch
 
@@ -131,7 +146,13 @@ Thresholds: thermal shutdown 85C (recover 80C), undervoltage cutoff 13.0V (recov
 
 ## jamrf-v4 Differences
 
-WiFi/ISM 2.4 GHz only (GPS L1 removed). Replaces GaN PA path with SEPIC boost-buck converter and quadrature hybrids. Simplified architecture vs v2.
+Dual-band like v2 (GPS L1 + WiFi 2.4 GHz). Replaces GaN PA path with SEPIC boost-buck converter and quadrature hybrids. Simplified architecture vs v2.
+
+## Repository Structure (main branch)
+- v2 schematic/PCB/library files are at `hardware/` root, NOT in `hardware/jamrf-v2/` subdirectory
+- Firmware is in `firmware/`, NOT alongside hardware files
+- Legacy HackRF-derived boards (jawbreaker, jellybean, etc.) are in their own subdirectories under `hardware/`
+- Only v2 files should be modified; other versions are archived
 
 ## Known Issues / TODO
 - 7 pre-existing wire_dangling ERC warnings in power/control sheets (KiCad ERC false positives from wire-to-pin junction detection)
