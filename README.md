@@ -22,7 +22,7 @@
 ---
 <p align="center">
   <img src="render5.png" alt="KiCad Render visualizer (click for schematic)" href="output.pdf"/>
-  KiCad Render visualizer
+  KiCad Render visualizer [click for schematic](https://github.com/Arcioth/JamRF/blob/main/output.pdf)
 </p>
 ---
 
