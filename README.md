@@ -1,7 +1,9 @@
 <p align="center">
   <img src="logo.jpg" alt="jamRF Logo" width="200"/>
 </p>
-
+<p align="center">
+  <img href="output.pdf" src="render5.jpg" alt="KiCad Render visualizer (click for schematic)" width="200"/>
+</p>
 <h1 align="center">jamRF</h1>
 
 <p align="center">
