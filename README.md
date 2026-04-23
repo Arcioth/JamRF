@@ -21,7 +21,7 @@
 
 ---
 <p align="center">
-  <img src="render5.png" alt="KiCad Render visualizer (click for schematic)" href="output.pdf" width="200"/>
+  <img src="render5.png" alt="KiCad Render visualizer (click for schematic)" href="output.pdf"/>
 </p>
 ---
 
