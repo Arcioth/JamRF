@@ -22,6 +22,7 @@
 ---
 <p align="center">
   <img src="render5.png" alt="KiCad Render visualizer (click for schematic)" href="output.pdf"/>
+  KiCad Render visualizer
 </p>
 ---
 
