@@ -1,9 +1,7 @@
 <p align="center">
   <img src="logo.jpg" alt="jamRF Logo" width="200"/>
 </p>
-<p align="center">
-  <img href="output.pdf" src="render5.jpg" alt="KiCad Render visualizer (click for schematic)" width="200"/>
-</p>
+
 <h1 align="center">jamRF</h1>
 
 <p align="center">
@@ -21,6 +19,10 @@
 
 > **This project is NOT affiliated with or related to [TIIUAE's JamRF](https://github.com/tiiuae/jamrf).** TIIUAE's JamRF is an SDR-based RF testing framework built on software-defined radio platforms. This project is an entirely independent custom PCB hardware design for a chaos-modulated RF jammer — purpose-built analog/RF hardware with no SDR components, no shared codebase, and a fundamentally different architecture.
 
+---
+<p align="center">
+  <img src="render5.jpg" alt="KiCad Render visualizer (click for schematic)" href="output.pdf" width="200"/>
+</p>
 ---
 
 > **Legal Notice:** This design is published for educational and research purposes only. Intentional RF interference is illegal in most jurisdictions. The user is solely responsible for ensuring compliance with all applicable local, national, and international regulations. The author assumes no liability for misuse.
